@@ -4,7 +4,7 @@
             <a href="#"><div class="header-option" id="main">Strona Główna</div></a>
             <a href="#"><div class="header-option" id="short">Wycieczki Jednioniowe</div></a>
             <a href="#"><div class="header-option" id="long">Dłuższe Wycieczki</div></a>
-            <a href="#"><div class="header-option" id="blog">O blogu</div></a>
+            <a href="#"><div class="header-option" id="about">O blogu</div></a>
         </div>
     </div>
 </header>
@@ -47,22 +47,22 @@
         color: #000000;
     }
 </style>
-<script>
-
-    document.addEventListener('DOMContentLoaded', function() {
-  const path = window.location.pathname;
-
-  if (path.endsWith('/blog.html')) {
-    const blogOption = document.getElementById('blog');
-    if (blogOption) {
-      blogOption.style.color = 'rgb(43, 140, 200)';
-    }
-  }
-  if (path.endsWith('/index.html') || path === '/' || path.endsWith('/Dokad-Z-Warszawy/')) {
-    const mainOption = document.getElementById('main');
-    if (mainOption) {
-      mainOption.style.color = 'rgb(43, 140, 200)';
-    }
-  }
-});
+<script>   
+            document.addEventListener('DOMContentLoaded', function() {
+        const path = window.location.pathname;
+        
+        if (path === '/Dokad-Z-Warszawy/blog.html' || path === '/blog.html') {
+            const mainOption = document.getElementById('about');
+            if (mainOption) {
+                mainOption.style.color = 'rgb(43, 140, 200)';
+            }
+        }
+        
+        if (path === '/Dokad-Z-Warszawy/index.html' || path === '/index.html' || path === '/Dokad-Z-Warszawy/' || path === '/') {
+            const mainOption = document.getElementById('main');
+            if (mainOption) {
+                mainOption.style.color = 'rgb(43, 140, 200)';
+            }
+        }
+    });
 </script>
