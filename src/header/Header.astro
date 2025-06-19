@@ -56,5 +56,11 @@
         mainOption.style.color = 'rgb(43, 140, 200)';
       }
     }
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+      const mainOption = document.getElementById('main');
+      if (mainOption) {
+        mainOption.style.color = 'rgb(43, 140, 200)';
+      }
+    }
   });
 </script>
