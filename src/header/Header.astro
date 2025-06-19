@@ -1,20 +1,57 @@
 <header>
-    <div class="header-options">
-        <a href="#"><div class="header-option">Strona Główna</div></a>
-        <a href="#"><div class="header-option">Wycieczki Jednioniowe</div></a>
-        <a href="#"><div class="header-option">Dłuższe Wycieczki</div></a>
-        <a href="#"><div class="header-option">O blogu</div></a>
+    <div class="header-container">
+        <div class="header-options">
+            <a href="#"><div class="header-option" id="main">Strona Główna</div></a>
+            <a href="#"><div class="header-option">Wycieczki Jednioniowe</div></a>
+            <a href="#"><div class="header-option">Dłuższe Wycieczki</div></a>
+            <a href="#"><div class="header-option">O blogu</div></a>
+        </div>
     </div>
 </header>
 <style>
     header{
-        width:700px;
-        display: flex;
+        width:100%;
+        height:75px;
+        display:flex;
         justify-content: flex-end;
-        height:100px;
     }
+    .header-container{
+        display: flex;
+        justify-content:flex-end ;
+        height:75px;
+        margin-right:45px;
+    }
+
     .header-options{
         display: flex;
         justify-content: space-between;
+        gap:25px;
+
+    }
+    .header-option{
+        font-family:'Sour Gummy', sans-serif;
+        color: #000;
+        font-size:25px;
+        display:flex;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+        transition: all 0.2s ease-in-out;
+     }
+    .header-option:hover{
+        color:rgb(43, 140, 200);
+        transition:all 0.2s ease-in-out;
+    }
+    .header-options a{
+        text-decoration: none;
+        color: #000;
     }
 </style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.location.href.includes(index.astro)) {
+            document.main.style.color= 'rgb(43, 140, 200)';
+            });
+        });
+    });
+</script>
