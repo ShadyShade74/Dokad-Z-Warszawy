@@ -24,55 +24,67 @@ import Article from '../layouts/Article.astro';
 		<li>
 			<Article>
 				<div slot="image">
-					<img src="../src/assets/farma.png" alt="Farma Iluzji" width="400"  height="300"/>
+					<a href="#">
+						<img src="../src/assets/farma.png" alt="Farma Iluzji" width="400" height="300" />
+					</a>
 				</div>
 				<div slot="header">
-					<h2></h2>
-				<div slot="content"></div>
+					<h2>Farma Iluzji - Miejsce Zabawy i Magii</h2>
+				<div slot="content" style="font-size:19px; color:rgb(77, 77, 77) ; font-weight:400;letter-spacing;1px; margin-top:30px;margin-bottom:30px;">
+					Chcecie przeżyć dzień pełen dobrych emocji i zabawy? Wybierzcie się do Farmy Iluzji. To jest miejsce, które zachwyci oraz wciągnie dzieci na cały dzień. Dlatego najlepiej się wybrać z samego rana, żeby na spokojnie nacieszyć się mnóstwem atrakcji, które oferuje Farma Iluzji. A tego uwierzcie jest sporo
+				</div>
+					
 
 
-
-				<div slot="publish-date"></div>
+				<div slot="publish-date" style="margin-top:100px;">22 Maja 2022</div>
 			
 			</Article>
 		</li>
 		<li>
 			<Article>
 				<div slot="image">
-					<img src="../src/assets/radziejowice.png" alt="Farma Iluzji" width="400"  height="300"/>
+					<a href="#">
+						<img src="../src/assets/wola.png" alt="Zelazowa Wola"  width="400" height="300"/>
+					</a>
+				</div>
+				
+				<div slot="header">
+					<h2>Dom urodzenia fryderyka Chopina w Żelazowej Woli</h2>
+				<div slot="content" style="font-size:19px; color:rgb(77, 77, 77) ; font-weight:400;letter-spacing;1px; margin-top:30px;margin-bottom:30px;"></div>
+					
+
+
+				<div slot="publish-date" style="margin-top:100px;"></div>
+			</Article>
+		</li>
+		<li>
+			<Article>
+				
+				<div slot="image">
+					<a href="#">
+						<img src="../src/assets/radziejowice.png" alt="radziejowice" width="400" height="300"/>
+					</a>
 				</div>
 				<div slot="header">
-					<h2></h2>
-				<div slot="content"></div>
+					<h2>Pałac w Radziejowicach - Miejsce na piękny spacer</h2>
+				<div slot="content" style="font-size:19px; color:rgb(77, 77, 77) ; font-weight:400;letter-spacing;1px; margin-top:30px;margin-bottom:30px;""></div>
 
 
 
 				<div slot="publish-date"></div>
+
 			</Article>
 		</li>
 		<li>
 			<Article>
 				<div slot="image">
-					<img src="../src/assets/wola.png" alt="Farma Iluzji" width="400"  height="300"/>
+					<a href="#">
+						<img src="../src/assets/farma-iluzji.png" alt="Farma Iluzji" width="400" height="300"/>
+					</a>
 				</div>
 				<div slot="header">
 					<h2></h2>
-				<div slot="content"></div>
-
-
-
-				<div slot="publish-date"></div>
-
-			</Article>
-		</li>
-		<li>
-			<Article>
-				<div slot="image">
-					<img src="../src/assets/farma.png" alt="Farma Iluzji" width="400"  height="300"/>
-				</div>
-				<div slot="header">
-					<h2></h2>
-				<div slot="content"></div>
+				<div slot="content" style="font-size:19px; color:rgb(77, 77, 77) ; font-weight:400;letter-spacing;1px; margin-top:30px;margin-bottom:30px;"></div>
 
 
 
@@ -95,12 +107,14 @@ import Article from '../layouts/Article.astro';
 	.search-input {
 		width: 100%;
 		max-width: 800px;
+		height:50px;
 		padding: 10px;
 		border: 1px solid #ccc;
 		border-radius: 4px;
 		font-size: 16px;
-		margin: 20px auto;
+		margin: 50px auto;
 		display: block;
+
 	}
 		.articles-grid {
 			display: grid;
