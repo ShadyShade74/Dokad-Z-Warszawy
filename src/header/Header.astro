@@ -2,9 +2,9 @@
     <div class="header-container">
         <div class="header-options">
             <a href="/Dokad-Z-Warszawy/"><div class="header-option" id="main">Strona Główna</div></a>
-            <a href="#"><div class="header-option" id="short">Wycieczki Jednioniowe</div></a>
-            <a href="#"><div class="header-option" id="long">Dłuższe Wycieczki</div></a>
-            <a href="/Dokad-Z-Warszawy/blog"><div class="header-option" id="about">O blogu</div></a>
+            <a href="/Dokad-Z-Warszawy/short-trips"><div class="header-option" id="short">Wycieczki Jednioniowe</div></a>
+            <a href="/Dokad-Z-Warszawy/long-trips"><div class="header-option" id="long">Dłuższe Wycieczki</div></a>
+            <a href="/Dokad-Z-Warszawy/child-trips"><div class="header-option" id="child">Gdzie z Dziećmi</div></a>
         </div>
     </div>
 </header>
@@ -51,8 +51,8 @@
             document.addEventListener('DOMContentLoaded', function() {
         const path = window.location.pathname;
         
-        if (path === '/Dokad-Z-Warszawy/blog.html' || path === '/blog.html' || path === '/Dokad-Z-Warszawy/' || path === '/') {
-            const mainOption = document.getElementById('blog');
+        if (path === '/Dokad-Z-Warszawy/child-trips' || path === '/child-trips') {
+            const mainOption = document.getElementById('child');
             if (mainOption) {
                 mainOption.style.color = 'rgb(43, 140, 200)';
             }
@@ -64,8 +64,14 @@
                 mainOption.style.color = 'rgb(43, 140, 200)';
             }
         }
-        if (path === '/Dokad-Z-Warszawy/short-trips.html' || path === '/short-trips.html' || path === '/' || path === '/index.html') {
+        if (path === '/Dokad-Z-Warszawy/short-trips' || path === '/short-trips') {
             const mainOption = document.getElementById('short');
+            if (mainOption) {
+                mainOption.style.color = 'rgb(43, 140, 200)';
+            }
+        }
+        if (path === '/Dokad-Z-Warszawy/long-trips' || path === '/long-trips') {
+            const mainOption = document.getElementById('long');
             if (mainOption) {
                 mainOption.style.color = 'rgb(43, 140, 200)';
             }
