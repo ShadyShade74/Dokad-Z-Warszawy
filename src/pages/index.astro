@@ -4,6 +4,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../header/Header.astro';
 import Logo from '../components/Logo.astro';
 import About from '../components/About.astro';
+import Search from '../components/Search.astro';
+import Article from '../layouts/Article.astro';
 ---
 
 
@@ -17,8 +19,32 @@ import About from '../components/About.astro';
 	<About>
 		
 	</About>
+	<input type="text" placeholder="Szukaj..." class="search-input" />
+	<ul>
+
+
+
+
+
+
+	</ul>
 	<Footer>
 
 	</Footer>
 </Layout>
-
+<style>
+	.search-input {
+		width: 100%;
+		max-width: 800px;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		font-size: 16px;
+		margin: 20px auto;
+		display: block;
+	}
+</style>
+<script>
+	const searchinput = document.querySelector('input')
+	const li = document.querySelectorAll('ul div')
+</script>
