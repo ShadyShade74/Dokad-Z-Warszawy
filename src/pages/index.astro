@@ -4,7 +4,6 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../header/Header.astro';
 import Logo from '../components/Logo.astro';
 import About from '../components/About.astro';
-import Search from '../components/Search.astro';
 import Article from '../layouts/Article.astro';
 ---
 
@@ -21,19 +20,68 @@ import Article from '../layouts/Article.astro';
 	</About>
 	<input type="text" placeholder="Farma Iluzji etc." class="search-input" />
 	<ul>
+	<div class="articles-grid">
 		<li>
-			<Article><div slot="content">1</div></Article>
-		</li>
-		<li>
-			<Article><div slot="content">2</div></Article>
-		</li>
-		<li>
-			<Article><div slot="content">34</div></Article>
-		</li>
-		<li>
-			<Article><div slot="content">4</div></Article>
-		</li>
+			<Article>
+				<div slot="image">
+					<img src="../src/assets/farma.png" alt="Farma Iluzji" width="400"  height="300"/>
+				</div>
+				<div slot="header">
+					<h2></h2>
+				<div slot="content"></div>
 
+
+
+				<div slot="publish-date"></div>
+			
+			</Article>
+		</li>
+		<li>
+			<Article>
+				<div slot="image">
+					<img src="../src/assets/radziejowice.png" alt="Farma Iluzji" width="400"  height="300"/>
+				</div>
+				<div slot="header">
+					<h2></h2>
+				<div slot="content"></div>
+
+
+
+				<div slot="publish-date"></div>
+			</Article>
+		</li>
+		<li>
+			<Article>
+				<div slot="image">
+					<img src="../src/assets/wola.png" alt="Farma Iluzji" width="400"  height="300"/>
+				</div>
+				<div slot="header">
+					<h2></h2>
+				<div slot="content"></div>
+
+
+
+				<div slot="publish-date"></div>
+
+			</Article>
+		</li>
+		<li>
+			<Article>
+				<div slot="image">
+					<img src="../src/assets/farma.png" alt="Farma Iluzji" width="400"  height="300"/>
+				</div>
+				<div slot="header">
+					<h2></h2>
+				<div slot="content"></div>
+
+
+
+				<div slot="publish-date"></div>
+
+
+			</Article>
+		</li>
+	</div>
 
 
 
@@ -53,6 +101,20 @@ import Article from '../layouts/Article.astro';
 		font-size: 16px;
 		margin: 20px auto;
 		display: block;
+	}
+		.articles-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 24px; /* odstęp między artykułami */
+		}
+		.articles-grid article {
+			background: #fff;
+			border-radius: 12px;
+			box-shadow: 0 2px 8px #0001;
+			padding: 16px;
+		}
+	ul , li{
+		  list-style: none;
 	}
 </style>
 <script>

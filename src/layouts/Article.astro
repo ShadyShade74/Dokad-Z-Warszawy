@@ -1,4 +1,31 @@
-<div id="article">
-    <slot name="content" />
-    <slot name="header" />
+<div class="article">
+    <slot name="image" class="image"/>
+    <slot name="header" class="header"/>
+    <slot name="content" class="content"/>
+    <slot name="publish-date" class="date"/>
 </div>
+
+<style>
+    .article{
+        width:450px;
+        height:700px;
+        border-right: 1px solid #000;
+        font-family:'Lato', sans-serif;
+        display: flex;
+        justify-content: center;
+    }
+    .image{
+        width:400px;
+        height:300px;
+    }
+    .header{
+        width:400px;
+        height:50px;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .content{
+        width:400px;
+        
+    }
+</style>
