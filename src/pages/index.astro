@@ -19,9 +19,20 @@ import Article from '../layouts/Article.astro';
 	<About>
 		
 	</About>
-	<input type="text" placeholder="Szukaj..." class="search-input" />
+	<input type="text" placeholder="Farma Iluzji etc." class="search-input" />
 	<ul>
-
+		<li>
+			<Article><div slot="content">1</div></Article>
+		</li>
+		<li>
+			<Article><div slot="content">2</div></Article>
+		</li>
+		<li>
+			<Article><div slot="content">34</div></Article>
+		</li>
+		<li>
+			<Article><div slot="content">4</div></Article>
+		</li>
 
 
 
@@ -45,6 +56,23 @@ import Article from '../layouts/Article.astro';
 	}
 </style>
 <script>
-	const searchinput = document.querySelector('input')
-	const li = document.querySelectorAll('ul div')
+
+	
+	const searchInput = document.querySelector("input");
+	const ul = document.querySelector("ul");
+	const allLi = [...document.querySelectorAll("ul li")];
+
+	function searchWord(e) {
+		const currentWord = e.target.value.trim().toLowerCase();
+		ul.innerHTML = "";
+		allLi.forEach(li => {
+		if (li.textContent.toLowerCase().includes(currentWord)) {
+			ul.appendChild(li);
+		}
+		});
+	}
+
+	searchInput?.addEventListener("input", searchWord);
+
+
 </script>
