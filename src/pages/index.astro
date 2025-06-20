@@ -119,7 +119,7 @@ import Article from '../layouts/Article.astro';
 		.articles-grid {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-			gap: 24px; /* odstęp między artykułami */
+			gap: 24px;
 		}
 		.articles-grid article {
 			background: #fff;
@@ -130,6 +130,15 @@ import Article from '../layouts/Article.astro';
 	ul , li{
 		  list-style: none;
 	}
+	@media (max-width: 768px) {
+		.articles-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (max-width: 480px) {
+		.articles-grid {
+			grid-template-columns: 1fr;
+		}
 </style>
 <script>
 
