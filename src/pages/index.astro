@@ -25,7 +25,7 @@ import Article from '../layouts/Article.astro';
 			<Article>
 				<div slot="image">
 					<a href="#">
-						<img src="../public/images/farma.png" alt="Farma Iluzji" width="400" height="300" />
+						<img src="/public/farma.png" ... />
 					</a>
 				</div>
 				<div slot="header">
@@ -44,7 +44,7 @@ import Article from '../layouts/Article.astro';
 			<Article>
 				<div slot="image">
 					<a href="#">
-						<img src="../public/images/wola.png" alt="Zelazowa Wola"  width="400" height="300"/>
+						<img src="/public/wola.png" ... />
 					</a>
 				</div>
 				
@@ -62,7 +62,7 @@ import Article from '../layouts/Article.astro';
 				
 				<div slot="image">
 					<a href="#">
-						<img src="../public/images/radziejowice.png" alt="radziejowice" width="400" height="300"/>
+						<img src="/public/radziejowice.png" ... />
 					</a>
 				</div>
 				<div slot="header">
@@ -79,7 +79,7 @@ import Article from '../layouts/Article.astro';
 			<Article>
 				<div slot="image">
 					<a href="#">
-						<img src="../public/images/farma-iluzji.png" alt="Farma Iluzji" width="400" height="300"/>
+						<img src="../public/images/" alt="Farma Iluzji" width="400" height="300"/>
 					</a>
 				</div>
 				<div slot="header">
@@ -92,6 +92,102 @@ import Article from '../layouts/Article.astro';
 
 
 			</Article>
+
+		</li>
+		<li>
+			<Article>
+				<div slot="image">
+					<a href="#">
+						<img src="../public/images/" alt="Farma Iluzji" width="400" height="300"/>
+					</a>
+				</div>
+				<div slot="header">
+					<h2>Farma Iluzji</h2>
+				<div slot="content" style="font-size:19px; color:rgb(77, 77, 77) ; font-weight:400;letter-spacing;1px; margin-top:30px;margin-bottom:30px;"></div>
+
+
+
+				<div slot="publish-date"></div>
+
+
+			</Article>
+			
+		</li>
+		<li>
+			<Article>
+				<div slot="image">
+					<a href="#">
+						<img src="../public/images/" alt="Farma Iluzji" width="400" height="300"/>
+					</a>
+				</div>
+				<div slot="header">
+					<h2>Farma Iluzji</h2>
+				<div slot="content" style="font-size:19px; color:rgb(77, 77, 77) ; font-weight:400;letter-spacing;1px; margin-top:30px;margin-bottom:30px;"></div>
+
+
+
+				<div slot="publish-date"></div>
+
+
+			</Article>
+			
+		</li>
+		<li>
+			<Article>
+				<div slot="image">
+					<a href="#">
+						<img src="../public/images/" alt="Farma Iluzji" width="400" height="300"/>
+					</a>
+				</div>
+				<div slot="header">
+					<h2>Farma Iluzji</h2>
+				<div slot="content" style="font-size:19px; color:rgb(77, 77, 77) ; font-weight:400;letter-spacing;1px; margin-top:30px;margin-bottom:30px;"></div>
+
+
+
+				<div slot="publish-date"></div>
+
+
+			</Article>
+			
+		</li>
+		<li>
+			<Article>
+				<div slot="image">
+					<a href="#">
+						<img src="../public/images/" alt="Farma Iluzji" width="400" height="300"/>
+					</a>
+				</div>
+				<div slot="header">
+					<h2>Farma Iluzji</h2>
+				<div slot="content" style="font-size:19px; color:rgb(77, 77, 77) ; font-weight:400;letter-spacing;1px; margin-top:30px;margin-bottom:30px;"></div>
+
+
+
+				<div slot="publish-date"></div>
+
+
+			</Article>
+			
+		</li>
+		<li>
+			<Article>
+				<div slot="image">
+					<a href="#">
+						<img src="../public/images/" alt="Farma Iluzji" width="400" height="300"/>
+					</a>
+				</div>
+				<div slot="header">
+					<h2>Farma Iluzji</h2>
+				<div slot="content" style="font-size:19px; color:rgb(77, 77, 77) ; font-weight:400;letter-spacing;1px; margin-top:30px;margin-bottom:30px;"></div>
+
+
+
+				<div slot="publish-date"></div>
+
+
+			</Article>
+			
 		</li>
 	</div>
 
@@ -104,13 +200,6 @@ import Article from '../layouts/Article.astro';
 	</Footer>
 </Layout>
 <style>
-	.articles-grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 24px;
-	list-style: none;
-	padding: 0;
-	}
 	.articles-grid li {
 	background: #fff;
 	border-radius: 12px;
@@ -142,32 +231,21 @@ import Article from '../layouts/Article.astro';
 	display: block;
 	box-sizing: border-box;
 	}
+	.articles-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+		}
 		@media (max-width: 1024px) {
-	.articles-grid {
-		grid-template-columns: 1fr;
-		margin-left:auto;
-		margin-right:auto;
-	}
-	}
-
-/* Telefon */
-	@media (max-width: 600px) {
-	.articles-grid {
-		grid-template-columns: 1fr;
-		margin-left:auto;
-		margin-right:auto;
-	}
-	.search-input {
-		width: 90%;
-		font-size: 14px;
-		height: 40px;
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
-	.articles-grid li {
-		padding: 8px;
-	}
-	}
+		.articles-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		}
+		@media (max-width: 600px) {
+		.articles-grid {
+			grid-template-columns: 1fr;
+		}
+		}
 	
 </style>
 <script>

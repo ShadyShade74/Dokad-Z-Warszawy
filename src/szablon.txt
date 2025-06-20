@@ -1,0 +1,19 @@
+        <li>
+			<Article>
+				<div slot="image">
+					<a href="#">
+						<img src="../public/images/" alt="Farma Iluzji" width="400" height="300"/>
+					</a>
+				</div>
+				<div slot="header">
+					<h2>Farma Iluzji</h2>
+				<div slot="content" style="font-size:19px; color:rgb(77, 77, 77) ; font-weight:400;letter-spacing;1px; margin-top:30px;margin-bottom:30px;"></div>
+
+
+
+				<div slot="publish-date"></div>
+
+
+			</Article>
+			
+		</li>
