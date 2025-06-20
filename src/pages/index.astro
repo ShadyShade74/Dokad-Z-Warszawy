@@ -83,7 +83,7 @@ import Article from '../layouts/Article.astro';
 					</a>
 				</div>
 				<div slot="header">
-					<h2></h2>
+					<h2>Farma Iluzji</h2>
 				<div slot="content" style="font-size:19px; color:rgb(77, 77, 77) ; font-weight:400;letter-spacing;1px; margin-top:30px;margin-bottom:30px;"></div>
 
 
@@ -174,20 +174,20 @@ import Article from '../layouts/Article.astro';
 
 	
 	const searchInput = document.querySelector("input");
-	const ul = document.querySelector("ul");
-	const allLi = [...document.querySelectorAll("ul li")];
+const grid = document.querySelector(".articles-grid");
+const allLi = [...grid.querySelectorAll("li")];
 
-	function searchWord(e) {
-		const currentWord = e.target.value.trim().toLowerCase();
-		ul.innerHTML = "";
-		allLi.forEach(li => {
-		if (li.textContent.toLowerCase().includes(currentWord)) {
-			ul.appendChild(li);
-		}
-		});
-	}
+function searchWord(e) {
+  const currentWord = e.target.value.trim().toLowerCase();
+  grid.innerHTML = "";
+  allLi.forEach(li => {
+    if (li.textContent.toLowerCase().includes(currentWord)) {
+      grid.appendChild(li);
+    }
+  });
+}
 
-	searchInput?.addEventListener("input", searchWord);
+searchInput?.addEventListener("input", searchWord);
 
 
 </script>
