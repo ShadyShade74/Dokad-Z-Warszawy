@@ -104,41 +104,71 @@ import Article from '../layouts/Article.astro';
 	</Footer>
 </Layout>
 <style>
+	.articles-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+	list-style: none;
+	padding: 0;
+	}
+	.articles-grid li {
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px #0001;
+	padding: 16px;
+	width: 100%;
+	box-sizing: border-box;
+	}
+	.articles-grid img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 8px;
+	}
+	ul, li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	}
 	.search-input {
-		width: 100%;
-		max-width: 800px;
-		height:50px;
-		padding: 10px;
-		border: 1px solid #ccc;
-		border-radius: 4px;
-		font-size: 16px;
-		margin: 50px auto;
-		display: block;
+	width: 100%;
+	max-width: 800px;
+	height: 50px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	margin: 50px auto;
+	display: block;
+	box-sizing: border-box;
+	}
+		@media (max-width: 1024px) {
+	.articles-grid {
+		grid-template-columns: 1fr;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	}
 
+/* Telefon */
+	@media (max-width: 600px) {
+	.articles-grid {
+		grid-template-columns: 1fr;
+		margin-left:auto;
+		margin-right:auto;
 	}
-		.articles-grid {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 24px;
-		}
-		.articles-grid article {
-			background: #fff;
-			border-radius: 12px;
-			box-shadow: 0 2px 8px #0001;
-			padding: 16px;
-		}
-	ul , li{
-		  list-style: none;
+	.search-input {
+		width: 90%;
+		font-size: 14px;
+		height: 40px;
+		margin-top: 30px;
+		margin-bottom: 30px;
 	}
-	@media (max-width: 768px) {
-		.articles-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
+	.articles-grid li {
+		padding: 8px;
 	}
-	@media (max-width: 480px) {
-		.articles-grid {
-			grid-template-columns: 1fr;
-		}
+	}
+	
 </style>
 <script>
 
