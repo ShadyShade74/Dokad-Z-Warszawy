@@ -231,6 +231,15 @@ import Article from '../layouts/Article.astro';
 	display: block;
 	box-sizing: border-box;
 	}
+	@media (max-width: 600px) {
+		.search-input {
+			width: 95%;
+			font-size: 14px;
+			height: 40px;
+			margin: 24px auto 32px auto; /* większy odstęp na dole */
+			display: block;
+		}
+		}
 	.articles-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
