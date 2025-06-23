@@ -222,10 +222,9 @@ import Article from '../layouts/Article.astro';
 	}
   .articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    grid-template-columns: repeat(auto-fit, (3)(440px, 1fr));
     gap: 28px;
     margin: 40px auto 60px auto;
-    max-width: 1440px;
     width: 100%;
     padding: 0 12px;
     box-sizing: border-box;
@@ -264,22 +263,26 @@ import Article from '../layouts/Article.astro';
     justify-content: flex-start;
     position: relative;
   }
+  .article + .article {
+	border-right: 3px solid #111;
+  }
   .article .date {
     margin-top: auto;
     padding-bottom: 10px;
     text-align: right;
     color: #888;
     font-size: 1rem;
-    width: 440px;
+    min-width: 400px;
     position: absolute;
     left: 0;
     bottom: 0;
   }
   .article .content {
     margin-right: 10px;
-    width: 440px;
+    min-width: 390px;
     flex: 1 1 auto;
     margin-bottom: 40px;
+	padding:10px;
   }
   .article .header {
     font-size: 1.5rem;
