@@ -17,7 +17,7 @@ import Article from '../layouts/Article.astro';
     <!-- 1 -->
     <Article>
       <div slot="image">
-        <img src="../images/farma.png" alt="Farma Iluzji" width="400" height="300" />
+        <img src="images/farma.png" alt="Farma Iluzji" width="400" height="300"/>
       </div>
       <div slot="header">
         <a href="#"><h2>Farma Iluzji – dzień pełen śmiechu i magii</h2></a>
@@ -30,7 +30,7 @@ import Article from '../layouts/Article.astro';
     <!-- 2 -->
     <Article>
       <div slot="image">
-        <a href="#"><img src="/images/wola.png" alt="Dom urodzenia Fryderyka Chopina w Żelazowej Woli" width="400" height="300" /></a>
+        <a href="#"><img src="images/wola.png" alt="Dom urodzenia Fryderyka Chopina w Żelazowej Woli" width="400" height="300" /></a>
       </div>
       <div slot="header">
         <a href="#"><h2>Dom urodzenia Chopina w Żelazowej Woli</h2></a>
@@ -43,7 +43,7 @@ import Article from '../layouts/Article.astro';
     <!-- 3 -->
     <Article>
       <div slot="image">
-        <a href="#"><img src="/images/radziejowice.png" alt="Radziejowice" width="400" height="300" /></a>
+        <a href="#"><img src="images/radziejowice.png" alt="Radziejowice" width="400" height="300" /></a>
       </div>
       <div slot="header">
         <a href="#"><h2>Spacer: Radziejowice – park i pałac</h2></a>
@@ -56,7 +56,7 @@ import Article from '../layouts/Article.astro';
     <!-- 4 -->
     <Article>
       <div slot="image">
-        <a href="#"><img src="/images/ciechanow.png" alt="Ciechanów" width="400" height="300" /></a>
+        <a href="#"><img src="images/ciechanow.webp" alt="Ciechanów" width="400" height="300" /></a>
       </div>
       <div slot="header">
         <a href="#"><h2>Ciechanów: zamek, wieża, muzea – plan na wyjazd</h2></a>
@@ -69,7 +69,7 @@ import Article from '../layouts/Article.astro';
     <!-- 5 -->
     <Article>
       <div slot="image">
-        <a href="#"><img src="/images/torus.png" alt="Wieża ciśnień i park nauki Torus" width="400" height="300" /></a>
+        <a href="#"><img src="images/wieza.webp" alt="Wieża ciśnień i park nauki Torus" width="400" height="300" /></a>
       </div>
       <div slot="header">
         <a href="#"><h2>Wieża ciśnień i park nauki Torus</h2></a>
@@ -82,7 +82,7 @@ import Article from '../layouts/Article.astro';
     <!-- 6 -->
     <Article>
       <div slot="image">
-        <a href="#"><img src="/images/zamek.png" alt="Zamek Książąt Mazowieckich w Ciechanowie" width="400" height="300" /></a>
+        <a href="#"><img src="images/zamek.webp" alt="Zamek Książąt Mazowieckich w Ciechanowie" width="400" height="300" /></a>
       </div>
       <div slot="header">
         <a href="#"><h2>Zamek Książąt Mazowieckich w Ciechanowie</h2></a>
@@ -95,7 +95,7 @@ import Article from '../layouts/Article.astro';
     <!-- 7 -->
     <Article>
       <div slot="image">
-        <a href="#"><img src="/images/tomaszow.png" alt="Tomaszów Mazowiecki" width="400" height="300" /></a>
+        <a href="#"><img src="images/tomaszow.webp" alt="Tomaszów Mazowiecki" width="400" height="300" /></a>
       </div>
       <div slot="header">
         <a href="#"><h2>Tomaszów Mazowiecki i okolica: plan na wyjazd</h2></a>
@@ -108,7 +108,7 @@ import Article from '../layouts/Article.astro';
     <!-- 8 -->
     <Article>
       <div slot="image">
-        <a href="#"><img src="/images/bunkier.png" alt="Bunkier w Konewce" width="400" height="300" /></a>
+        <a href="#"><img src="images/konewka.webp" alt="Bunkier w Konewce" width="400" height="300" /></a>
       </div>
       <div slot="header">
         <a href="#"><h2>Bunkier w Konewce – gratka dla miłośników historii</h2></a>
@@ -121,7 +121,7 @@ import Article from '../layouts/Article.astro';
     <!-- 9 -->
     <Article>
       <div slot="image">
-        <a href="#"><img src="/images/skansen.png" alt="Skansen Rzeki Pilicy" width="400" height="300" /></a>
+        <a href="#"><img src="images/skansen.webp" alt="Skansen Rzeki Pilicy" width="400" height="300" /></a>
       </div>
       <div slot="header">
         <a href="#"><h2>Skansen Rzeki Pilicy – muzeum na powietrzu</h2></a>
@@ -212,7 +212,7 @@ import Article from '../layouts/Article.astro';
       <div slot="publish-date">7 września, 2020</div>
     </Article>
   </div>
-  <button id="show-more-btn" class="show-more-btn">Pokaż więcej</button>
+  <button id="show-more-btn" class="show-more-btn">Więcej Wpisów ...</button>
   <Footer />
 </Layout>
 
@@ -336,6 +336,8 @@ import Article from '../layouts/Article.astro';
     cursor: pointer;
     font-weight: 600;
     transition:background 0.2s ease-in-out;
+	width:90%;
+
   }
   .show-more-btn:hover {
     background: linear-gradient(90deg, #8f94fb, #4e54c8);
