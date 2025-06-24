@@ -213,6 +213,8 @@ import Article from '../layouts/Article.astro';
     </Article>
   </div>
   <button id="show-more-btn" class="show-more-btn">Więcej Wpisów ...</button>
+
+  
   <Footer />
 </Layout>
 
@@ -390,7 +392,7 @@ import Article from '../layouts/Article.astro';
   updateVisibleArticles();
 
   showMoreBtn?.addEventListener("click", () => {
-    visibleCount += 6; // ile pokazać więcej na klik
+    visibleCount += 6;
     updateVisibleArticles();
   });
 
