@@ -3,9 +3,15 @@
 <div style="display: flex;justify-content: center;">
             <div class="article">
                 <slot name="image" class="image"/>
-                <slot name="header" class="header"/>
-                <slot name="content" class="content"/>
-                <slot name="publish-date" class="date"/>
+                <div class="header">
+                    <slot name="header" />
+                </div>
+                <div class="content">
+                    <slot name="content"/>
+                </div>
+                <div class="publish-date">
+                    <slot name="publish-date"/>
+                </div>
             </div>
 </div>
 
@@ -15,7 +21,7 @@
 
 <style>
     .article{
-        width:460px;
+        width:450px;
         height:700px;
         font-family:'Lato', sans-serif;
     }
@@ -28,16 +34,11 @@
     .header{
         width:400px;
         height:50px;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 600;
-        margin-left:auto;
-        margin-right:auto;
     }
     .content{
         width:390px;
-        margin:10px;
-        margin-left:auto;
-        margin-right:auto;
     }
     .publish-date{
         bottom:0;

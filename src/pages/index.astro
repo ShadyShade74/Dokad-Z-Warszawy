@@ -222,93 +222,111 @@ import Article from '../layouts/Article.astro';
 	}
   .articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, (3)(440px, 1fr));
-    gap: 28px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 32px;
     margin: 40px auto 60px auto;
+    max-width: 1440px;
     width: 100%;
     padding: 0 12px;
     box-sizing: border-box;
   }
-  @media (max-width: 1024px) {
-    .articles-grid {
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      max-width: 960px;
-      gap: 16px;
-      padding: 0 6px;
+  .articles-grid > * {
+    box-sizing: border-box;
+    border-right: 2px solid #111;
+    background: #fff;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: 0 2px 8px #0001;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 700px;
+  }
+  @media (min-width: 1025px) {
+    .articles-grid > *:nth-child(3n) {
+      border-right: none;
+    }
+  }
+  @media (max-width: 1024px) and (min-width: 601px) {
+    .articles-grid > *:nth-child(2n) {
+      border-right: none;
     }
   }
   @media (max-width: 600px) {
-    .articles-grid {
-      grid-template-columns: 1fr;
-      max-width: 99vw;
-      padding: 0 2vw;
-      gap: 8px;
+    .articles-grid > * {
+      border-right: none;
     }
-  }
-  .articles-grid > * {
-    box-sizing: border-box;
-    border-right: 3px solid #111;
-    background: #fff;
-    min-width: 0;
-    min-height: 0;
-    width: 440px;
-    margin: 0;
   }
   .article {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     height: 100%;
     min-height: 0;
     justify-content: flex-start;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 18px 0 18px;
   }
-  .article + .article {
-	border-right: 3px solid #111;
+  .article .image {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
   }
-  .article .date {
-    margin-top: auto;
-    padding-bottom: 10px;
-    text-align: right;
-    color: #888;
-    font-size: 1rem;
-    min-width: 400px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
-  .article .content {
-    margin-right: 10px;
-    min-width: 390px;
-    flex: 1 1 auto;
-    margin-bottom: 40px;
-	padding:10px;
+  .article .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
   .article .header {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #222;
-    margin: 0 0 12px 0;
-    line-height: 1.2;
-    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    letter-spacing: 0.5px;
-    display: block;
-    text-align: left;
+    width: 100%;
     min-height: 50px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    text-align: left;
+    background: none;
+    color: #222;
+    box-sizing: border-box;
+  }
+  .article .content {
+    width: 100%;
+    flex: 1 1 auto;
+    margin: 0 0 18px 0;
+    padding: 0 4px;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.5;
+    background: #fafbfc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .article .date {
+    width: 100%;
+    font-size: 0.98rem;
+    color: #888;
+    padding: 0 4px 12px 4px;
+    margin-top: auto;
+    text-align: right;
+    box-sizing: border-box;
   }
   .articles-grid img {
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
   }
   .search-input {
     width: 100%;
-    max-width: 800px;
+    max-width: 90%;
     height: 50px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -369,7 +387,6 @@ import Article from '../layouts/Article.astro';
     }
   }
 
-  // Na starcie – pokaż tylko 9
   updateVisibleArticles();
 
   showMoreBtn?.addEventListener("click", () => {
