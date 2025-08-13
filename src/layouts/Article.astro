@@ -1,12 +1,12 @@
 
 
-<div style="display: flex;justify-content: center;">
+<div class="article-container">
             <div class="article">
                 <slot name="image" class="image"/>
                 <div class="header">
                     <slot name="header" />
                 </div>
-                <div class="content">
+                <div class="content" >
                     <slot name="content"/>
                 </div>
                 <div class="publish-date">
@@ -20,6 +20,12 @@
 
 
 <style>
+    
+    .article-container{
+        display: flex;
+        justify-content: center;
+    }
+    
     .article{
         width:450px;
         height:700px;
@@ -40,6 +46,12 @@
     }
     .content{
         width:390px;
+        style="font-size:19px;
+        color:rgb(77, 77, 77);
+        font-weight:400; 
+        letter-spacing:1px;
+        margin-top:30px; 
+        margin-bottom:30px;
     }
     .publish-date{
         bottom:0;
